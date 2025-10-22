@@ -3814,6 +3814,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: ceaebfbff98475348872cb955bfed35a, type: 3}
   spriteRetono: {fileID: 21300000, guid: 45f6a9ec07bbd4e43bdc88354531f302, type: 3}
   spriteCrecida: {fileID: 21300000, guid: ceaebfbff98475348872cb955bfed35a, type: 3}
+  spriteFinalizado: {fileID: -5170306360617213910, guid: 6ccca32e6601f814397ced99aab48f5c, type: 3}
   spriteMarchita: {fileID: 21300000, guid: ad00c6ab799bb504bab05dbadd1c301d, type: 3}
   riegosNecesarios: 1
   abonosNecesarios: 1
