@@ -40,6 +40,7 @@ public class GameManager : MonoBehaviour
     public Image imagenFondo;
     public Image imagenMaceta;
     public Image imagenPlanta;
+    public Image imagenEscarabajo;
 
     [Header("Sprites para Setup")]
     public Sprite[] spritesFondo;
@@ -48,19 +49,14 @@ public class GameManager : MonoBehaviour
     [Header("Sprites de la Planta")]
     public Sprite spriteRetono;
     public Sprite spriteCrecida;
-    public Sprite spriteFinalizado; // <--- NUEVA VARIABLE
+    public Sprite spriteFinalizado;
     public Sprite spriteMarchita;
-
-    [Header("Lógica del Nivel (Geranio)")]
-    public int riegosNecesarios = 1;
-    public int abonosNecesarios = 1;
 
     #endregion
 
     #region Variables Privadas
-    // Enum para saber en qué etapa está la planta
     private enum PlantStage { Retono, Crecida, Finalizado }
-    private PlantStage currentPlantStage; // <--- NUEVA VARIABLE
+    private PlantStage currentPlantStage;
 
     private int dialogoActual = 0;
     private int fondoActual = 0;
@@ -68,7 +64,8 @@ public class GameManager : MonoBehaviour
     private GameState previousState;
 
     private int riegosActuales = 0;
-    private int abonosActuales = 0;
+    private bool haPuestoPesticida = false;
+    private bool tieneEscarabajo = false;
     #endregion
 
     #region Ciclo de Vida de Unity
@@ -89,7 +86,7 @@ public class GameManager : MonoBehaviour
     #endregion
 
     #region Máquina de Estados Principal
-    
+
     void CambiarEstado(GameState nuevoEstado)
     {
         currentState = nuevoEstado;
@@ -134,7 +131,7 @@ public class GameManager : MonoBehaviour
                 if (panelContenedorSetup != null) panelContenedorSetup.SetActive(false);
                 if (panelContenedorJuego != null) panelContenedorJuego.SetActive(false);
                 if (botonVolverMenu != null) botonVolverMenu.SetActive(false);
-                
+
                 panelSonido.SetActive(false);
                 panelPausa.SetActive(true);
                 break;
@@ -157,17 +154,18 @@ public class GameManager : MonoBehaviour
         panelContenedorSetup.SetActive(false);
         panelContenedorJuego.SetActive(false);
         if (botonVolverMenu != null) botonVolverMenu.SetActive(false);
-        
+
         if (imagenFondo != null) imagenFondo.gameObject.SetActive(false);
         if (imagenMaceta != null) imagenMaceta.gameObject.SetActive(false);
         if (imagenPlanta != null) imagenPlanta.gameObject.SetActive(false);
         if (imagenNpc != null) imagenNpc.gameObject.SetActive(false);
+        if (imagenEscarabajo != null) imagenEscarabajo.gameObject.SetActive(false);
     }
-    
+
     #endregion
 
     #region Métodos para Botones
-    
+
     public void BotonFlores() => CambiarEstado(GameState.FlowerSelection);
     public void BotonCreditos() => CambiarEstado(GameState.Credits);
     public void BotonSalir() => Application.Quit();
@@ -175,16 +173,16 @@ public class GameManager : MonoBehaviour
 
     public void IniciarNivelGeranio()
     {
+        // ... (sin cambios)
         dialogoActual = 0;
         fondoActual = 0;
         macetaActual = 0;
         imagenFondo.sprite = spritesFondo[fondoActual];
         imagenMaceta.sprite = spritesMaceta[macetaActual];
-        
-        // Asignamos la etapa inicial
         imagenPlanta.sprite = spriteRetono;
-        currentPlantStage = PlantStage.Retono; // <--- NUEVA LÍNEA
-
+        currentPlantStage = PlantStage.Retono;
+        tieneEscarabajo = false;
+        if (imagenEscarabajo != null) imagenEscarabajo.gameObject.SetActive(false);
         CambiarEstado(GameState.Tutorial);
     }
     public void AvanzarDialogo()
@@ -202,13 +200,25 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void CiclarFondo() => fondoActual = (fondoActual + 1) % spritesFondo.Length;
-    public void CiclarMaceta() => macetaActual = (macetaActual + 1) % spritesMaceta.Length;
-    
+    public void CiclarFondo()
+    {
+        // ... (sin cambios)
+        fondoActual = (fondoActual + 1) % spritesFondo.Length;
+        imagenFondo.sprite = spritesFondo[fondoActual];
+    }
+
+    public void CiclarMaceta()
+    {
+        // ... (sin cambios)
+        macetaActual = (macetaActual + 1) % spritesMaceta.Length;
+        imagenMaceta.sprite = spritesMaceta[macetaActual];
+    }
+
     public void EmpezarJuego()
     {
+        // ... (sin cambios)
         riegosActuales = 0;
-        abonosActuales = 0;
+        haPuestoPesticida = false;
         CambiarEstado(GameState.Playing);
     }
 
@@ -219,16 +229,18 @@ public class GameManager : MonoBehaviour
     // --- LÓGICA DE JUEGO ---
     public void BotonRegar()
     {
+        // ... (sin cambios)
         if (currentState != GameState.Playing) return;
         riegosActuales++;
         Debug.Log("Planta regada. Total: " + riegosActuales);
     }
 
-    public void BotonAbono()
+    public void BotonPesticida()
     {
+        // ... (sin cambios)
         if (currentState != GameState.Playing) return;
-        abonosActuales++;
-        Debug.Log("Planta abonada. Total: " + abonosActuales);
+        haPuestoPesticida = true;
+        Debug.Log("Pesticida aplicado.");
     }
 
     // --- LÓGICA DE 'PASAR TIEMPO' MODIFICADA ---
@@ -236,57 +248,103 @@ public class GameManager : MonoBehaviour
     {
         if (currentState != GameState.Playing) return;
 
-        // 1. Revisar si se cumplen las condiciones
-        if (riegosActuales >= riegosNecesarios && abonosActuales >= abonosNecesarios)
+        // --- 1. VERIFICACIÓN DE MUERTE (PRIORIDAD ALTA) ---
+        // Muerte por riego incorrecto
+        if (riegosActuales <= 0 || riegosActuales >= 4)
         {
-            // --- CAMINO DEL ÉXITO ---
-            // Revisamos en qué etapa estamos para saber a cuál avanzar
-            switch (currentPlantStage)
-            {
-                case PlantStage.Retono:
-                    Debug.Log("¡Condiciones cumplidas! La planta crece a 'Crecida'.");
-                    imagenPlanta.sprite = spriteCrecida;
-                    currentPlantStage = PlantStage.Crecida;
-                    // Reseteamos contadores para la siguiente etapa
-                    riegosActuales = 0;
-                    abonosActuales = 0;
-                    break;
-                
-                case PlantStage.Crecida:
-                    Debug.Log("¡Condiciones cumplidas! La planta crece a 'Finalizado'.");
+            Debug.Log("¡GAME OVER! Riego incorrecto (Total: " + riegosActuales + ")");
+            Morir();
+            return;
+        }
+        // Muerte por escarabajo no tratado
+        if (tieneEscarabajo && !haPuestoPesticida)
+        {
+            Debug.Log("¡GAME OVER! El escarabajo no fue tratado.");
+            Morir();
+            return;
+        }
+
+        // --- 2. LÓGICA DE PESTICIDA Y ESCARABAJO ---
+        // Si llegamos aquí, la planta sobrevive. Ahora vemos qué pasa con el bicho.
+        bool bichoCuradoOPrevenido = false;
+
+        if (tieneEscarabajo && haPuestoPesticida)
+        {
+            // Caso A: Tenía bicho y lo curó.
+            tieneEscarabajo = false;
+            imagenEscarabajo.gameObject.SetActive(false);
+            bichoCuradoOPrevenido = true;
+            Debug.Log("Escarabajo eliminado.");
+        }
+        else if (!tieneEscarabajo && haPuestoPesticida)
+        {
+            // Caso B: No tenía bicho y puso pesticida (prevención).
+            bichoCuradoOPrevenido = true;
+            Debug.Log("Planta protegida, no aparecerá escarabajo.");
+        }
+        else if (!tieneEscarabajo && !haPuestoPesticida)
+        {
+            // Caso C: No tenía bicho y NO puso pesticida. Aparecerá uno.
+            tieneEscarabajo = true;
+            imagenEscarabajo.gameObject.SetActive(true);
+            bichoCuradoOPrevenido = false; // No está curado ni prevenido
+            Debug.Log("¡Aparece un escarabajo!");
+        }
+
+        // --- 3. LÓGICA DE CRECIMIENTO ---
+        switch (currentPlantStage)
+        {
+            case PlantStage.Retono:
+                // Desde Retoño siempre se avanza a Crecida (con o sin bicho)
+                Debug.Log("La planta crece a 'Crecida'.");
+                imagenPlanta.sprite = spriteCrecida;
+                currentPlantStage = PlantStage.Crecida;
+                break;
+
+            case PlantStage.Crecida:
+                // --- ¡AQUÍ ESTÁ TU NUEVA LÓGICA! ---
+                // Solo avanza a Finalizado si el bicho fue curado o prevenido
+                if (bichoCuradoOPrevenido)
+                {
+                    Debug.Log("La planta crece a 'Finalizado'.");
                     imagenPlanta.sprite = spriteFinalizado;
                     currentPlantStage = PlantStage.Finalizado;
-                    GanarNivel(); // El nivel se ha completado
-                    break;
+                    GanarNivel();
+                }
+                else
+                {
+                    // Si no puso pesticida (Caso C), el bicho aparece
+                    // pero la planta NO avanza.
+                    Debug.Log("La planta se queda en 'Crecida' por el nuevo escarabajo.");
+                }
+                break;
 
-                case PlantStage.Finalizado:
-                    // Ya está en la etapa final, no hacemos nada.
-                    Debug.Log("La planta ya está en su etapa final.");
-                    break;
-            }
+            case PlantStage.Finalizado:
+                Debug.Log("La planta ya está en su etapa final.");
+                break;
         }
-        else
-        {
-            // --- CAMINO DEL FRACASO ---
-            Debug.Log("¡Condiciones NO cumplidas! La planta se marchita.");
-            Morir();
-        }
+
+        // Reseteamos contadores de acciones para el próximo turno
+        riegosActuales = 0;
+        haPuestoPesticida = false;
     }
 
     private void Morir()
     {
+        // ... (sin cambios)
         imagenPlanta.sprite = spriteMarchita;
         panelContenedorJuego.SetActive(false);
         botonVolverMenu.SetActive(true);
+        if (imagenEscarabajo != null) imagenEscarabajo.gameObject.SetActive(false);
     }
 
     private void GanarNivel()
     {
+        // ... (sin cambios)
         Debug.Log("¡Nivel Ganado! Mostrando botón de menú.");
-        // Ocultamos los botones de acción
         panelContenedorJuego.SetActive(false);
-        // Mostramos el botón de volver al menú (reutilizamos el de Game Over)
         botonVolverMenu.SetActive(true);
+        if (imagenEscarabajo != null) imagenEscarabajo.gameObject.SetActive(false);
     }
 
     #endregion
