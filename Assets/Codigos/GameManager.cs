@@ -36,6 +36,7 @@ public class GameManager : MonoBehaviour
     [Header("Elementos del Nivel")]
     public GameObject panelContenedorSetup;
     public GameObject panelContenedorJuego;
+    public GameObject botonVolverMenu; // <--- REEMPLAZA a panelGameOver
     public Image imagenFondo;
     public Image imagenMaceta;
     public Image imagenPlanta;
@@ -44,6 +45,15 @@ public class GameManager : MonoBehaviour
     public Sprite[] spritesFondo;
     public Sprite[] spritesMaceta;
 
+    [Header("Sprites de la Planta")]
+    public Sprite spriteRetono;
+    public Sprite spriteCrecida;
+    public Sprite spriteMarchita;
+
+    [Header("Lógica del Nivel (Geranio)")]
+    public int riegosNecesarios = 1;
+    public int abonosNecesarios = 1;
+
     #endregion
 
     #region Variables Privadas
@@ -51,6 +61,9 @@ public class GameManager : MonoBehaviour
     private int fondoActual = 0;
     private int macetaActual = 0;
     private GameState previousState;
+
+    private int riegosActuales = 0;
+    private int abonosActuales = 0;
     #endregion
 
     #region Ciclo de Vida de Unity
@@ -99,24 +112,27 @@ public class GameManager : MonoBehaviour
                 foreach (var panel in panelesDialogo) { if (panel != null) panel.SetActive(false); }
                 if (panelesDialogo.Length > 0) panelesDialogo[dialogoActual].SetActive(true);
                 break;
-            
-            // --- SECCIÓN CORREGIDA ---
             case GameState.LevelSetup:
                 if (imagenFondo != null) imagenFondo.gameObject.SetActive(true);
                 if (imagenMaceta != null) imagenMaceta.gameObject.SetActive(true);
                 panelContenedorSetup.SetActive(true);
                 break;
+            
+            // --- SECCIÓN MODIFICADA ---
             case GameState.Playing:
                 if (imagenFondo != null) imagenFondo.gameObject.SetActive(true);
                 if (imagenMaceta != null) imagenMaceta.gameObject.SetActive(true);
-                if (imagenPlanta != null) imagenPlanta.gameObject.SetActive(true); // La planta se activa aquí
+                if (imagenPlanta != null) imagenPlanta.gameObject.SetActive(true);
                 panelContenedorJuego.SetActive(true);
+                if (botonVolverMenu != null) botonVolverMenu.SetActive(false); // Nos aseguramos de ocultar el botón de Game Over
                 break;
 
             case GameState.Paused:
                 if (panelContenedorSetup != null) panelContenedorSetup.SetActive(false);
                 if (panelContenedorJuego != null) panelContenedorJuego.SetActive(false);
-
+                // El botón de volver al menú también debe ocultarse si está activo
+                if (botonVolverMenu != null) botonVolverMenu.SetActive(false);
+                
                 panelSonido.SetActive(false);
                 panelPausa.SetActive(true);
                 break;
@@ -137,6 +153,7 @@ public class GameManager : MonoBehaviour
         panelContenedorTutorial.SetActive(false);
         panelContenedorSetup.SetActive(false);
         panelContenedorJuego.SetActive(false);
+        if (botonVolverMenu != null) botonVolverMenu.SetActive(false); // <--- CAMBIO
         
         if (imagenFondo != null) imagenFondo.gameObject.SetActive(false);
         if (imagenMaceta != null) imagenMaceta.gameObject.SetActive(false);
@@ -160,6 +177,7 @@ public class GameManager : MonoBehaviour
         macetaActual = 0;
         imagenFondo.sprite = spritesFondo[fondoActual];
         imagenMaceta.sprite = spritesMaceta[macetaActual];
+        imagenPlanta.sprite = spriteRetono;
         CambiarEstado(GameState.Tutorial);
     }
     public void AvanzarDialogo()
@@ -188,20 +206,57 @@ public class GameManager : MonoBehaviour
     }
     public void EmpezarJuego()
     {
+        riegosActuales = 0;
+        abonosActuales = 0;
         CambiarEstado(GameState.Playing);
     }
 
-    public void BotonReanudar()
+    public void BotonReanudar() => CambiarEstado(previousState);
+    public void BotonSonido() => CambiarEstado(GameState.SoundSettings);
+    public void BotonVolverAPausa() => CambiarEstado(GameState.Paused);
+
+    // --- LÓGICA DE JUEGO ---
+    public void BotonRegar()
     {
-        CambiarEstado(previousState);
+        if (currentState != GameState.Playing) return;
+        riegosActuales++;
+        Debug.Log("Planta regada. Total: " + riegosActuales);
     }
-    public void BotonSonido()
+
+    public void BotonAbono()
     {
-        CambiarEstado(GameState.SoundSettings);
+        if (currentState != GameState.Playing) return;
+        abonosActuales++;
+        Debug.Log("Planta abonada. Total: " + abonosActuales);
     }
-    public void BotonVolverAPausa()
+
+    public void BotonPasarTiempo()
     {
-        CambiarEstado(GameState.Paused);
+        if (currentState != GameState.Playing) return;
+
+        if (riegosActuales >= riegosNecesarios && abonosActuales >= abonosNecesarios)
+        {
+            Debug.Log("¡Condiciones cumplidas! La planta crece.");
+            imagenPlanta.sprite = spriteCrecida;
+            riegosActuales = 0;
+            abonosActuales = 0;
+        }
+        else
+        {
+            Debug.Log("¡Condiciones NO cumplidas! La planta se marchita.");
+            Morir();
+        }
     }
+
+    // --- FUNCIÓN 'MORIR' MODIFICADA ---
+    private void Morir()
+    {
+        imagenPlanta.sprite = spriteMarchita;
+        // Ocultamos los botones de acción
+        panelContenedorJuego.SetActive(false);
+        // Mostramos el botón de Game Over
+        botonVolverMenu.SetActive(true);
+    }
+
     #endregion
 }
