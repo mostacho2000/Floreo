@@ -1,0 +1,1937 @@
+fileFormatVersion: 2
+guid: 652cf9fa23d6e454abe431d8e1b2c72f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1001153858646556098
+    second: BotonDescargar_0
+  - first:
+      213: 2304209472780210681
+    second: BotonDescargar_1
+  - first:
+      213: 8889443897871162016
+    second: BotonDescargar_2
+  - first:
+      213: 4784987487209698743
+    second: BotonDescargar_3
+  - first:
+      213: -2222066006069044432
+    second: BotonDescargar_4
+  - first:
+      213: -8917972015497771067
+    second: BotonDescargar_5
+  - first:
+      213: 3256602885956216679
+    second: BotonDescargar_6
+  - first:
+      213: 309997482073496102
+    second: BotonDescargar_7
+  - first:
+      213: -3866328505499208330
+    second: BotonDescargar_8
+  - first:
+      213: 7680780381470107340
+    second: BotonDescargar_9
+  - first:
+      213: -7773743170019994521
+    second: BotonDescargar_10
+  - first:
+      213: 890027023255216389
+    second: BotonDescargar_11
+  - first:
+      213: 7187705032746227968
+    second: BotonDescargar_12
+  - first:
+      213: 4690343004190285929
+    second: BotonDescargar_13
+  - first:
+      213: -2870841558822207735
+    second: BotonDescargar_14
+  - first:
+      213: 3039240647231804356
+    second: BotonDescargar_15
+  - first:
+      213: 16634893914094745
+    second: BotonDescargar_16
+  - first:
+      213: -6483729043078375004
+    second: BotonDescargar_17
+  - first:
+      213: 6003329964668636600
+    second: BotonDescargar_18
+  - first:
+      213: -2230950733358779205
+    second: BotonDescargar_19
+  - first:
+      213: 8112350057298363399
+    second: BotonDescargar_20
+  - first:
+      213: -5901439947622573580
+    second: BotonDescargar_21
+  - first:
+      213: -6013840573610611381
+    second: BotonDescargar_22
+  - first:
+      213: -1735768528355646897
+    second: BotonDescargar_23
+  - first:
+      213: 8808161341432117569
+    second: BotonDescargar_24
+  - first:
+      213: 7565846248698959354
+    second: BotonDescargar_25
+  - first:
+      213: 7295697160514920784
+    second: BotonDescargar_26
+  - first:
+      213: -8229931378576026926
+    second: BotonDescargar_27
+  - first:
+      213: 3303698570948054255
+    second: BotonDescargar_28
+  - first:
+      213: 7121517515287420906
+    second: BotonDescargar_29
+  - first:
+      213: 1309063870669466753
+    second: BotonDescargar_30
+  - first:
+      213: 2439338147627219457
+    second: BotonDescargar_31
+  - first:
+      213: -2130220840172227108
+    second: BotonDescargar_32
+  - first:
+      213: 4793124796247723027
+    second: BotonDescargar_33
+  - first:
+      213: 32031216659290198
+    second: BotonDescargar_34
+  - first:
+      213: -4941219435512896984
+    second: BotonDescargar_35
+  - first:
+      213: 3720014263875318379
+    second: BotonDescargar_36
+  - first:
+      213: -3920330533324998900
+    second: BotonDescargar_37
+  - first:
+      213: 120785778578619444
+    second: BotonDescargar_38
+  - first:
+      213: 6415686728766024559
+    second: BotonDescargar_39
+  - first:
+      213: -8963870862605522108
+    second: BotonDescargar_40
+  - first:
+      213: 3587277496882955811
+    second: BotonDescargar_41
+  - first:
+      213: 6528589592122415522
+    second: BotonDescargar_42
+  - first:
+      213: -3507415053729628135
+    second: BotonDescargar_43
+  - first:
+      213: 6507963211095729456
+    second: BotonDescargar_44
+  - first:
+      213: -2336120501144438723
+    second: BotonDescargar_45
+  - first:
+      213: -1869467600885518084
+    second: BotonDescargar_46
+  - first:
+      213: 7865811776042968643
+    second: BotonDescargar_47
+  - first:
+      213: 5558273655928044124
+    second: BotonDescargar_48
+  - first:
+      213: -9021064369928182150
+    second: BotonDescargar_49
+  - first:
+      213: -7100606897427284140
+    second: BotonDescargar_50
+  - first:
+      213: 388538921711192929
+    second: BotonDescargar_51
+  - first:
+      213: -6066908153097964994
+    second: BotonDescargar_52
+  - first:
+      213: -4576789356266834021
+    second: BotonDescargar_53
+  - first:
+      213: -5950108701073032051
+    second: BotonDescargar_54
+  - first:
+      213: 7717705099199715231
+    second: BotonDescargar_55
+  - first:
+      213: -4307244807666941042
+    second: BotonDescargar_56
+  - first:
+      213: -783520820724770716
+    second: BotonDescargar_57
+  - first:
+      213: -2032295305996354444
+    second: BotonDescargar_58
+  - first:
+      213: -5503721472696042559
+    second: BotonDescargar_59
+  - first:
+      213: -1460854807473761547
+    second: BotonDescargar_60
+  - first:
+      213: 2082364996525647104
+    second: BotonDescargar_61
+  - first:
+      213: 4010190151261322649
+    second: BotonDescargar_62
+  - first:
+      213: -53657291961551735
+    second: BotonDescargar_63
+  - first:
+      213: 2358523362655684054
+    second: BotonDescargar_64
+  - first:
+      213: 7560048896549481082
+    second: BotonDescargar_65
+  - first:
+      213: -2639099495375663142
+    second: BotonDescargar_66
+  - first:
+      213: -2030242253405594559
+    second: BotonDescargar_67
+  - first:
+      213: -3607897281322380055
+    second: BotonDescargar_68
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 529, y: 278, z: 515, w: 292}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BotonDescargar_0
+      rect:
+        serializedVersion: 2
+        x: 1002
+        y: 776
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cdb32e4120d4ed00800000000000000
+      internalID: 1001153858646556098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotonDescargar_1
+      rect:
+        serializedVersion: 2
+        x: 1079
+        y: 770
+        width: 7
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f19729ae423aff10800000000000000
+      internalID: 2304209472780210681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotonDescargar_2
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 786
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0aadf577026ad5b70800000000000000
+      internalID: 8889443897871162016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotonDescargar_3
+      rect:
+        serializedVersion: 2
+        x: 694
+        y: 758
+        width: 26
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b5b2d584c0b76240800000000000000
+      internalID: 4784987487209698743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotonDescargar_4
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 774
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03b98c09db2a921e0800000000000000
+      internalID: -2222066006069044432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotonDescargar_5
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 766
+        width: 17
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c7816b83bffc3480800000000000000
+      internalID: -8917972015497771067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotonDescargar_6
+      rect:
+        serializedVersion: 2
+        x: 1095
+        y: 769
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 767aeef0217c13d20800000000000000
+      internalID: 3256602885956216679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotonDescargar_7
+      rect:
+        serializedVersion: 2
+        x: 1219
+        y: 764
+        width: 22
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62a914841155d4400800000000000000
+      internalID: 309997482073496102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotonDescargar_8
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 293
+        width: 894
+        height: 471
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 675b0cc75ba085ac0800000000000000
+      internalID: -3866328505499208330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotonDescargar_9
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 760
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc6a05bff0d979a60800000000000000
+      internalID: 7680780381470107340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotonDescargar_10
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 752
+        width: 27
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 764d6df16cd1e1490800000000000000
+      internalID: -7773743170019994521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotonDescargar_11
+      rect:
+        serializedVersion: 2
+        x: 889
+        y: 749
+        width: 26
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50120a1bcd20a5c00800000000000000
+      internalID: 890027023255216389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotonDescargar_12
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 760
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 009502b25abdfb360800000000000000
+      internalID: 7187705032746227968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotonDescargar_13
+      rect:
+        serializedVersion: 2
+        x: 1031
+        y: 750
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 960208f9c12771140800000000000000
+      internalID: 4690343004190285929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotonDescargar_14
+      rect:
+        serializedVersion: 2
+        x: 1076
+        y: 757
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90f39f700d8b828d0800000000000000
+      internalID: -2870841558822207735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotonDescargar_15
+      rect:
+        serializedVersion: 2
+        x: 1163
+        y: 757
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c31e2d144d8d2a20800000000000000
+      internalID: 3039240647231804356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotonDescargar_16
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 752
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99c30ae09591b3000800000000000000
+      internalID: 16634893914094745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotonDescargar_17
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 744
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a91e6f99ca2506a0800000000000000
+      internalID: -6483729043078375004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotonDescargar_18
+      rect:
+        serializedVersion: 2
+        x: 794
+        y: 752
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bd488dbbcc105350800000000000000
+      internalID: 6003329964668636600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotonDescargar_19
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 740
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb4b0cac0221a01e0800000000000000
+      internalID: -2230950733358779205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotonDescargar_20
+      rect:
+        serializedVersion: 2
+        x: 869
+        y: 750
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70483e2656bd49070800000000000000
+      internalID: 8112350057298363399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotonDescargar_21
+      rect:
+        serializedVersion: 2
+        x: 922
+        y: 746
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f918a282afd91ea0800000000000000
+      internalID: -5901439947622573580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotonDescargar_22
+      rect:
+        serializedVersion: 2
+        x: 932
+        y: 746
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4dab1a6cdb8a8ca0800000000000000
+      internalID: -6013840573610611381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotonDescargar_23
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 748
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f422f0f48bf49e7e0800000000000000
+      internalID: -1735768528355646897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotonDescargar_24
+      rect:
+        serializedVersion: 2
+        x: 974
+        y: 747
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 149b3688210ec3a70800000000000000
+      internalID: 8808161341432117569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotonDescargar_25
+      rect:
+        serializedVersion: 2
+        x: 1010
+        y: 747
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af55ceed3194ff860800000000000000
+      internalID: 7565846248698959354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotonDescargar_26
+      rect:
+        serializedVersion: 2
+        x: 1022
+        y: 750
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0516159c9e58f3560800000000000000
+      internalID: 7295697160514920784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotonDescargar_27
+      rect:
+        serializedVersion: 2
+        x: 1099
+        y: 741
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d29226e30969cd80800000000000000
+      internalID: -8229931378576026926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotonDescargar_28
+      rect:
+        serializedVersion: 2
+        x: 1140
+        y: 749
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fec0356b85819dd20800000000000000
+      internalID: 3303698570948054255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotonDescargar_29
+      rect:
+        serializedVersion: 2
+        x: 1273
+        y: 745
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aefdd60e276b4d260800000000000000
+      internalID: 7121517515287420906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotonDescargar_30
+      rect:
+        serializedVersion: 2
+        x: 1281
+        y: 746
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18c2d8797aaba2210800000000000000
+      internalID: 1309063870669466753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotonDescargar_31
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 657
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10a31600f154ad120800000000000000
+      internalID: 2439338147627219457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotonDescargar_32
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 642
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd57668ae6fef62e0800000000000000
+      internalID: -2130220840172227108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotonDescargar_33
+      rect:
+        serializedVersion: 2
+        x: 1394
+        y: 623
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31c467c6b99948240800000000000000
+      internalID: 4793124796247723027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotonDescargar_34
+      rect:
+        serializedVersion: 2
+        x: 1398
+        y: 565
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65853bac83cc17000800000000000000
+      internalID: 32031216659290198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotonDescargar_35
+      rect:
+        serializedVersion: 2
+        x: 1394
+        y: 524
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8226ff46a134d6bb0800000000000000
+      internalID: -4941219435512896984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotonDescargar_36
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 506
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b62bca5734520a330800000000000000
+      internalID: 3720014263875318379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotonDescargar_37
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 496
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c07bb0796203899c0800000000000000
+      internalID: -3920330533324998900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotonDescargar_38
+      rect:
+        serializedVersion: 2
+        x: 1397
+        y: 495
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43cf812960e1da100800000000000000
+      internalID: 120785778578619444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotonDescargar_39
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 483
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6b694a8619190950800000000000000
+      internalID: 6415686728766024559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotonDescargar_40
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 468
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44b6ced61fee99380800000000000000
+      internalID: -8963870862605522108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotonDescargar_41
+      rect:
+        serializedVersion: 2
+        x: 1388
+        y: 463
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 326067090e198c130800000000000000
+      internalID: 3587277496882955811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotonDescargar_42
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 445
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a9d4c2e4a53a9a50800000000000000
+      internalID: 6528589592122415522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotonDescargar_43
+      rect:
+        serializedVersion: 2
+        x: 1395
+        y: 446
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 910869a7798235fc0800000000000000
+      internalID: -3507415053729628135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotonDescargar_44
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 432
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 035eba05f0ee05a50800000000000000
+      internalID: 6507963211095729456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotonDescargar_45
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 306
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3837c018ce649fd0800000000000000
+      internalID: -2336120501144438723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotonDescargar_46
+      rect:
+        serializedVersion: 2
+        x: 758
+        y: 307
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf0fd123f115e06e0800000000000000
+      internalID: -1869467600885518084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotonDescargar_47
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 300
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 346202da22af82d60800000000000000
+      internalID: 7865811776042968643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotonDescargar_48
+      rect:
+        serializedVersion: 2
+        x: 806
+        y: 305
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5ab00ae074f22d40800000000000000
+      internalID: 5558273655928044124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotonDescargar_49
+      rect:
+        serializedVersion: 2
+        x: 869
+        y: 310
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a766f7e40cdbec280800000000000000
+      internalID: -9021064369928182150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotonDescargar_50
+      rect:
+        serializedVersion: 2
+        x: 879
+        y: 304
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45f782db5a3957d90800000000000000
+      internalID: -7100606897427284140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotonDescargar_51
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 306
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16b420a371e546500800000000000000
+      internalID: 388538921711192929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotonDescargar_52
+      rect:
+        serializedVersion: 2
+        x: 902
+        y: 292
+        width: 31
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e32bca9bd230ecba0800000000000000
+      internalID: -6066908153097964994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotonDescargar_53
+      rect:
+        serializedVersion: 2
+        x: 970
+        y: 304
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b973def445afb70c0800000000000000
+      internalID: -4576789356266834021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotonDescargar_54
+      rect:
+        serializedVersion: 2
+        x: 981
+        y: 305
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8cb49159a7fc6da0800000000000000
+      internalID: -5950108701073032051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotonDescargar_55
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 307
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f971507c5ebca1b60800000000000000
+      internalID: 7717705099199715231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotonDescargar_56
+      rect:
+        serializedVersion: 2
+        x: 1077
+        y: 304
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e83cd5e0ba79934c0800000000000000
+      internalID: -4307244807666941042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotonDescargar_57
+      rect:
+        serializedVersion: 2
+        x: 1171
+        y: 307
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 468d39ef6ff5025f0800000000000000
+      internalID: -783520820724770716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotonDescargar_58
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 306
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47cb46fcf26dbc3e0800000000000000
+      internalID: -2032295305996354444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotonDescargar_59
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 293
+        width: 20
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cb33450b7ade93b0800000000000000
+      internalID: -5503721472696042559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotonDescargar_60
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 298
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f2da14ea400abbe0800000000000000
+      internalID: -1460854807473761547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotonDescargar_61
+      rect:
+        serializedVersion: 2
+        x: 841
+        y: 296
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0056e967eeb06ec10800000000000000
+      internalID: 2082364996525647104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotonDescargar_62
+      rect:
+        serializedVersion: 2
+        x: 867
+        y: 299
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99d73b712be07a730800000000000000
+      internalID: 4010190151261322649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotonDescargar_63
+      rect:
+        serializedVersion: 2
+        x: 959
+        y: 302
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 984b50d2afe514ff0800000000000000
+      internalID: -53657291961551735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotonDescargar_64
+      rect:
+        serializedVersion: 2
+        x: 1117
+        y: 294
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d54d8990882bb020800000000000000
+      internalID: 2358523362655684054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotonDescargar_65
+      rect:
+        serializedVersion: 2
+        x: 1186
+        y: 295
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7a6a63aa60bae860800000000000000
+      internalID: 7560048896549481082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotonDescargar_66
+      rect:
+        serializedVersion: 2
+        x: 1196
+        y: 285
+        width: 22
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adf8833ddf8006bd0800000000000000
+      internalID: -2639099495375663142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotonDescargar_67
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 292
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14c55cd5d6123d3e0800000000000000
+      internalID: -2030242253405594559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotonDescargar_68
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 285
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e49ea0c98c2eedc0800000000000000
+      internalID: -3607897281322380055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 1537655665
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      BotonDescargar_0: 1001153858646556098
+      BotonDescargar_1: 2304209472780210681
+      BotonDescargar_10: -7773743170019994521
+      BotonDescargar_11: 890027023255216389
+      BotonDescargar_12: 7187705032746227968
+      BotonDescargar_13: 4690343004190285929
+      BotonDescargar_14: -2870841558822207735
+      BotonDescargar_15: 3039240647231804356
+      BotonDescargar_16: 16634893914094745
+      BotonDescargar_17: -6483729043078375004
+      BotonDescargar_18: 6003329964668636600
+      BotonDescargar_19: -2230950733358779205
+      BotonDescargar_2: 8889443897871162016
+      BotonDescargar_20: 8112350057298363399
+      BotonDescargar_21: -5901439947622573580
+      BotonDescargar_22: -6013840573610611381
+      BotonDescargar_23: -1735768528355646897
+      BotonDescargar_24: 8808161341432117569
+      BotonDescargar_25: 7565846248698959354
+      BotonDescargar_26: 7295697160514920784
+      BotonDescargar_27: -8229931378576026926
+      BotonDescargar_28: 3303698570948054255
+      BotonDescargar_29: 7121517515287420906
+      BotonDescargar_3: 4784987487209698743
+      BotonDescargar_30: 1309063870669466753
+      BotonDescargar_31: 2439338147627219457
+      BotonDescargar_32: -2130220840172227108
+      BotonDescargar_33: 4793124796247723027
+      BotonDescargar_34: 32031216659290198
+      BotonDescargar_35: -4941219435512896984
+      BotonDescargar_36: 3720014263875318379
+      BotonDescargar_37: -3920330533324998900
+      BotonDescargar_38: 120785778578619444
+      BotonDescargar_39: 6415686728766024559
+      BotonDescargar_4: -2222066006069044432
+      BotonDescargar_40: -8963870862605522108
+      BotonDescargar_41: 3587277496882955811
+      BotonDescargar_42: 6528589592122415522
+      BotonDescargar_43: -3507415053729628135
+      BotonDescargar_44: 6507963211095729456
+      BotonDescargar_45: -2336120501144438723
+      BotonDescargar_46: -1869467600885518084
+      BotonDescargar_47: 7865811776042968643
+      BotonDescargar_48: 5558273655928044124
+      BotonDescargar_49: -9021064369928182150
+      BotonDescargar_5: -8917972015497771067
+      BotonDescargar_50: -7100606897427284140
+      BotonDescargar_51: 388538921711192929
+      BotonDescargar_52: -6066908153097964994
+      BotonDescargar_53: -4576789356266834021
+      BotonDescargar_54: -5950108701073032051
+      BotonDescargar_55: 7717705099199715231
+      BotonDescargar_56: -4307244807666941042
+      BotonDescargar_57: -783520820724770716
+      BotonDescargar_58: -2032295305996354444
+      BotonDescargar_59: -5503721472696042559
+      BotonDescargar_6: 3256602885956216679
+      BotonDescargar_60: -1460854807473761547
+      BotonDescargar_61: 2082364996525647104
+      BotonDescargar_62: 4010190151261322649
+      BotonDescargar_63: -53657291961551735
+      BotonDescargar_64: 2358523362655684054
+      BotonDescargar_65: 7560048896549481082
+      BotonDescargar_66: -2639099495375663142
+      BotonDescargar_67: -2030242253405594559
+      BotonDescargar_68: -3607897281322380055
+      BotonDescargar_7: 309997482073496102
+      BotonDescargar_8: -3866328505499208330
+      BotonDescargar_9: 7680780381470107340
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

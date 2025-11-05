@@ -36,7 +36,9 @@ public class GameManager : MonoBehaviour
     [Header("Elementos del Nivel")]
     public GameObject panelContenedorSetup;
     public GameObject panelContenedorJuego;
-    public GameObject botonVolverMenu;
+    public GameObject botonVolverMenu_Win;  // <--- REEMPLAZA AL ANTERIOR
+    public GameObject botonVolverMenu_Lose; // <--- REEMPLAZA AL ANTERIOR
+    public GameObject botonDescarga;
     public Image imagenFondo;
     public Image imagenMaceta;
     public Image imagenPlanta;
@@ -98,53 +100,68 @@ public class GameManager : MonoBehaviour
 
         switch (currentState)
         {
-            // ... (casos MainMenu, Credits, FlowerSelection, Tutorial, LevelSetup no cambian) ...
-            case GameState.MainMenu:
-                panelMenu.SetActive(true);
-                break;
-            case GameState.Credits:
-                panelCreditos.SetActive(true);
-                break;
-            case GameState.FlowerSelection:
-                panelSelectorDeFlores.SetActive(true);
-                break;
-            case GameState.Tutorial:
-                if (imagenFondo != null) imagenFondo.gameObject.SetActive(true);
-                panelContenedorTutorial.SetActive(true);
-                if (imagenNpc != null) imagenNpc.gameObject.SetActive(true);
-                foreach (var panel in panelesDialogo) { if (panel != null) panel.SetActive(false); }
-                if (panelesDialogo.Length > 0) panelesDialogo[dialogoActual].SetActive(true);
-                break;
-            case GameState.LevelSetup:
-                if (imagenFondo != null) imagenFondo.gameObject.SetActive(true);
-                if (imagenMaceta != null) imagenMaceta.gameObject.SetActive(true);
-                panelContenedorSetup.SetActive(true);
-                break;
+            // ... (otros casos no cambian) ...
             case GameState.Playing:
                 if (imagenFondo != null) imagenFondo.gameObject.SetActive(true);
                 if (imagenMaceta != null) imagenMaceta.gameObject.SetActive(true);
                 if (imagenPlanta != null) imagenPlanta.gameObject.SetActive(true);
                 panelContenedorJuego.SetActive(true);
-                if (botonVolverMenu != null) botonVolverMenu.SetActive(false);
+                // Nos aseguramos de apagar los botones de fin de juego
+                if (botonVolverMenu_Win != null) botonVolverMenu_Win.SetActive(false);
+                if (botonVolverMenu_Lose != null) botonVolverMenu_Lose.SetActive(false);
+                if (botonDescarga != null) botonDescarga.SetActive(false);
                 break;
             case GameState.Paused:
                 if (panelContenedorSetup != null) panelContenedorSetup.SetActive(false);
                 if (panelContenedorJuego != null) panelContenedorJuego.SetActive(false);
-                if (botonVolverMenu != null) botonVolverMenu.SetActive(false);
+                // Apagamos también los botones de fin de juego si estuvieran activos
+                if (botonVolverMenu_Win != null) botonVolverMenu_Win.SetActive(false);
+                if (botonVolverMenu_Lose != null) botonVolverMenu_Lose.SetActive(false);
+                if (botonDescarga != null) botonDescarga.SetActive(false);
 
                 panelSonido.SetActive(false);
                 panelPausa.SetActive(true);
                 break;
-            case GameState.SoundSettings:
-                panelPausa.SetActive(true);
-                panelSonido.SetActive(true);
+            // ... (otros casos no cambian) ...
+            default:
+                // Esto maneja MainMenu, Credits, FlowerSelection, Tutorial, LevelSetup
+                // y asegura que los elementos correctos se muestren para esos estados.
+                ActivarPanelesSegunEstado(nuevoEstado);
                 break;
         }
     }
 
+    // Función de ayuda para organizar la activación de paneles
+    void ActivarPanelesSegunEstado(GameState estado)
+    {
+        panelMenu.SetActive(estado == GameState.MainMenu);
+        panelCreditos.SetActive(estado == GameState.Credits);
+        panelSelectorDeFlores.SetActive(estado == GameState.FlowerSelection);
+        panelPausa.SetActive(estado == GameState.Paused);
+        panelSonido.SetActive(estado == GameState.SoundSettings);
+
+        // Lógica de Tutorial
+        if (estado == GameState.Tutorial)
+        {
+            if (imagenFondo != null) imagenFondo.gameObject.SetActive(true);
+            panelContenedorTutorial.SetActive(true);
+            if (imagenNpc != null) imagenNpc.gameObject.SetActive(true);
+            foreach (var panel in panelesDialogo) { if (panel != null) panel.SetActive(false); }
+            if (panelesDialogo.Length > 0) panelesDialogo[dialogoActual].SetActive(true);
+        }
+
+        // Lógica de Setup
+        if (estado == GameState.LevelSetup)
+        {
+            if (imagenFondo != null) imagenFondo.gameObject.SetActive(true);
+            if (imagenMaceta != null) imagenMaceta.gameObject.SetActive(true);
+            panelContenedorSetup.SetActive(true);
+        }
+    }
+
+
     void ApagarTodo()
     {
-        // ... (sin cambios)
         panelMenu.SetActive(false);
         panelCreditos.SetActive(false);
         panelSelectorDeFlores.SetActive(false);
@@ -153,7 +170,11 @@ public class GameManager : MonoBehaviour
         panelContenedorTutorial.SetActive(false);
         panelContenedorSetup.SetActive(false);
         panelContenedorJuego.SetActive(false);
-        if (botonVolverMenu != null) botonVolverMenu.SetActive(false);
+
+        // Apagamos los DOS botones de menú y el de descarga
+        if (botonVolverMenu_Win != null) botonVolverMenu_Win.SetActive(false);
+        if (botonVolverMenu_Lose != null) botonVolverMenu_Lose.SetActive(false);
+        if (botonDescarga != null) botonDescarga.SetActive(false);
 
         if (imagenFondo != null) imagenFondo.gameObject.SetActive(false);
         if (imagenMaceta != null) imagenMaceta.gameObject.SetActive(false);
@@ -169,11 +190,11 @@ public class GameManager : MonoBehaviour
     public void BotonFlores() => CambiarEstado(GameState.FlowerSelection);
     public void BotonCreditos() => CambiarEstado(GameState.Credits);
     public void BotonSalir() => Application.Quit();
-    public void BotonVolverAlMenu() => CambiarEstado(GameState.MainMenu);
+    public void BotonVolverAlMenu() => CambiarEstado(GameState.MainMenu); // <-- Esta función sigue sirviendo para AMBOS botones
 
+    // ... (IniciarNivelGeranio, AvanzarDialogo, CiclarFondo, CiclarMaceta, EmpezarJuego, Pausa, etc. no cambian) ...
     public void IniciarNivelGeranio()
     {
-        // ... (sin cambios)
         dialogoActual = 0;
         fondoActual = 0;
         macetaActual = 0;
@@ -187,7 +208,6 @@ public class GameManager : MonoBehaviour
     }
     public void AvanzarDialogo()
     {
-        // ... (sin cambios)
         panelesDialogo[dialogoActual].SetActive(false);
         dialogoActual++;
         if (dialogoActual < panelesDialogo.Length)
@@ -199,29 +219,22 @@ public class GameManager : MonoBehaviour
             CambiarEstado(GameState.LevelSetup);
         }
     }
-
     public void CiclarFondo()
     {
-        // ... (sin cambios)
         fondoActual = (fondoActual + 1) % spritesFondo.Length;
         imagenFondo.sprite = spritesFondo[fondoActual];
     }
-
     public void CiclarMaceta()
     {
-        // ... (sin cambios)
         macetaActual = (macetaActual + 1) % spritesMaceta.Length;
         imagenMaceta.sprite = spritesMaceta[macetaActual];
     }
-
     public void EmpezarJuego()
     {
-        // ... (sin cambios)
         riegosActuales = 0;
         haPuestoPesticida = false;
         CambiarEstado(GameState.Playing);
     }
-
     public void BotonReanudar() => CambiarEstado(previousState);
     public void BotonSonido() => CambiarEstado(GameState.SoundSettings);
     public void BotonVolverAPausa() => CambiarEstado(GameState.Paused);
@@ -229,48 +242,35 @@ public class GameManager : MonoBehaviour
     // --- LÓGICA DE JUEGO ---
     public void BotonRegar()
     {
-        // ... (sin cambios)
         if (currentState != GameState.Playing) return;
         riegosActuales++;
         Debug.Log("Planta regada. Total: " + riegosActuales);
     }
-
     public void BotonPesticida()
     {
-        // ... (sin cambios)
         if (currentState != GameState.Playing) return;
         haPuestoPesticida = true;
         Debug.Log("Pesticida aplicado.");
     }
-
-    // --- LÓGICA DE 'PASAR TIEMPO' MODIFICADA ---
     public void BotonPasarTiempo()
     {
+        // ... (La lógica de BotonPasarTiempo no cambia en absoluto)
         if (currentState != GameState.Playing) return;
-
-        // --- 1. VERIFICACIÓN DE MUERTE (PRIORIDAD ALTA) ---
-        // Muerte por riego incorrecto
         if (riegosActuales <= 0 || riegosActuales >= 4)
         {
             Debug.Log("¡GAME OVER! Riego incorrecto (Total: " + riegosActuales + ")");
             Morir();
             return;
         }
-        // Muerte por escarabajo no tratado
         if (tieneEscarabajo && !haPuestoPesticida)
         {
             Debug.Log("¡GAME OVER! El escarabajo no fue tratado.");
             Morir();
             return;
         }
-
-        // --- 2. LÓGICA DE PESTICIDA Y ESCARABAJO ---
-        // Si llegamos aquí, la planta sobrevive. Ahora vemos qué pasa con el bicho.
         bool bichoCuradoOPrevenido = false;
-
         if (tieneEscarabajo && haPuestoPesticida)
         {
-            // Caso A: Tenía bicho y lo curó.
             tieneEscarabajo = false;
             imagenEscarabajo.gameObject.SetActive(false);
             bichoCuradoOPrevenido = true;
@@ -278,32 +278,24 @@ public class GameManager : MonoBehaviour
         }
         else if (!tieneEscarabajo && haPuestoPesticida)
         {
-            // Caso B: No tenía bicho y puso pesticida (prevención).
             bichoCuradoOPrevenido = true;
             Debug.Log("Planta protegida, no aparecerá escarabajo.");
         }
         else if (!tieneEscarabajo && !haPuestoPesticida)
         {
-            // Caso C: No tenía bicho y NO puso pesticida. Aparecerá uno.
             tieneEscarabajo = true;
             imagenEscarabajo.gameObject.SetActive(true);
-            bichoCuradoOPrevenido = false; // No está curado ni prevenido
+            bichoCuradoOPrevenido = false;
             Debug.Log("¡Aparece un escarabajo!");
         }
-
-        // --- 3. LÓGICA DE CRECIMIENTO ---
         switch (currentPlantStage)
         {
             case PlantStage.Retono:
-                // Desde Retoño siempre se avanza a Crecida (con o sin bicho)
                 Debug.Log("La planta crece a 'Crecida'.");
                 imagenPlanta.sprite = spriteCrecida;
                 currentPlantStage = PlantStage.Crecida;
                 break;
-
             case PlantStage.Crecida:
-                // --- ¡AQUÍ ESTÁ TU NUEVA LÓGICA! ---
-                // Solo avanza a Finalizado si el bicho fue curado o prevenido
                 if (bichoCuradoOPrevenido)
                 {
                     Debug.Log("La planta crece a 'Finalizado'.");
@@ -313,38 +305,47 @@ public class GameManager : MonoBehaviour
                 }
                 else
                 {
-                    // Si no puso pesticida (Caso C), el bicho aparece
-                    // pero la planta NO avanza.
                     Debug.Log("La planta se queda en 'Crecida' por el nuevo escarabajo.");
                 }
                 break;
-
             case PlantStage.Finalizado:
                 Debug.Log("La planta ya está en su etapa final.");
                 break;
         }
-
-        // Reseteamos contadores de acciones para el próximo turno
         riegosActuales = 0;
         haPuestoPesticida = false;
     }
 
+    // --- FUNCIONES 'MORIR' Y 'GANAR' MODIFICADAS ---
     private void Morir()
     {
-        // ... (sin cambios)
         imagenPlanta.sprite = spriteMarchita;
         panelContenedorJuego.SetActive(false);
-        botonVolverMenu.SetActive(true);
+
+        // Mostramos SOLO el botón de Game Over
+        botonVolverMenu_Lose.SetActive(true);
+        botonVolverMenu_Win.SetActive(false);
+        botonDescarga.SetActive(false);
+
         if (imagenEscarabajo != null) imagenEscarabajo.gameObject.SetActive(false);
     }
 
     private void GanarNivel()
     {
-        // ... (sin cambios)
-        Debug.Log("¡Nivel Ganado! Mostrando botón de menú.");
+        Debug.Log("¡Nivel Ganado! Mostrando botones.");
         panelContenedorJuego.SetActive(false);
-        botonVolverMenu.SetActive(true);
+
+        // Mostramos los botones de victoria
+        botonVolverMenu_Win.SetActive(true);
+        botonDescarga.SetActive(true);
+        botonVolverMenu_Lose.SetActive(false);
+
         if (imagenEscarabajo != null) imagenEscarabajo.gameObject.SetActive(false);
+    }
+
+    public void BotonDescarga()
+    {
+        Debug.Log("¡Botón de descarga presionado!");
     }
 
     #endregion
