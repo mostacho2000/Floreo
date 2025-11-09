@@ -2,20 +2,37 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
 
+// --- NUEVA CLASE DE DATOS ---
+// Esto define un "paquete" de datos. No es un script,
+// solo un molde para organizar la información.
+[System.Serializable]
+public class FlowerData
+{
+    [Header("Identificación")]
+    public string flowerName; // Para depuración
+
+    [Header("Diálogos del Tutorial")]
+    public GameObject[] panelesDialogo = new GameObject[3];
+
+    [Header("GameObjects de la Planta")]
+    public GameObject plantaRetono;
+    public GameObject plantaCrecida;
+    public GameObject plantaFinalizado;
+    public GameObject plantaMarchita;
+
+    [Header("Reglas de Crecimiento")]
+    public int riegosEtapa1;     // Retoño -> Crecida
+    public int pesticidasEtapa1; // Retoño -> Crecida
+    public int riegosEtapa2;     // Crecida -> Finalizado
+    public int pesticidasEtapa2; // Crecida -> Finalizado
+}
+// --- FIN DE LA NUEVA CLASE ---
+
+
 public class GameManager : MonoBehaviour
 {
     #region Estados del Juego
-    public enum GameState
-    {
-        MainMenu,
-        Credits,
-        FlowerSelection,
-        Tutorial,
-        LevelSetup,
-        Playing,
-        Paused,
-        SoundSettings
-    }
+    public enum GameState { MainMenu, Credits, FlowerSelection, Tutorial, LevelSetup, Playing, Paused, SoundSettings }
     public GameState currentState;
     #endregion
 
@@ -30,7 +47,7 @@ public class GameManager : MonoBehaviour
 
     [Header("Elementos del Tutorial")]
     public GameObject panelContenedorTutorial;
-    public GameObject[] panelesDialogo;
+    // public GameObject[] panelesDialogo; // <-- ELIMINADO (Ahora en FlowerData)
     public Image imagenNpc;
 
     [Header("Elementos del Nivel")]
@@ -38,39 +55,42 @@ public class GameManager : MonoBehaviour
     public GameObject panelContenedorJuego;
     public Image imagenFondo;
     public Image imagenMaceta;
-    public Image imagenPlanta;
     public Image imagenEscarabajo;
+    public Slider barraAgua;
+    public Slider barraPesticida;
 
-    [Header("Elementos de Fin de Nivel")] // <-- NUEVA SECCIÓN PARA ORDENAR
+    [Header("Elementos de Fin de Nivel")]
     public GameObject botonVolverMenu_Win;
     public GameObject botonVolverMenu_Lose;
     public GameObject botonDescarga;
-    public GameObject imagenVictoria; // <--- NUEVA IMAGEN
-    public GameObject imagenDerrota;  // <--- NUEVA IMAGEN
+    public GameObject imagenVictoria;
+    public GameObject imagenDerrota;
 
     [Header("Sprites para Setup")]
     public Sprite[] spritesFondo;
     public Sprite[] spritesMaceta;
 
-    [Header("Sprites de la Planta")]
-    public Sprite spriteRetono;
-    public Sprite spriteCrecida;
-    public Sprite spriteFinalizado;
-    public Sprite spriteMarchita;
+    // --- SECCIÓN DE DATOS DE FLORES (REEMPLAZA A LAS IMÁGENES DE PLANTA) ---
+    [Header("Datos de las Flores")]
+    public FlowerData[] todasLasFlores; // Aquí irán tus 4 flores
 
     #endregion
 
     #region Variables Privadas
     private enum PlantStage { Retono, Crecida, Finalizado }
     private PlantStage currentPlantStage;
-
+    
+    private FlowerData currentFlowerData; // La flor que se está jugando
+    private int riegosRequeridos;
+    private int pesticidasRequeridos;
+    
     private int dialogoActual = 0;
     private int fondoActual = 0;
     private int macetaActual = 0;
     private GameState previousState;
 
     private int riegosActuales = 0;
-    private bool haPuestoPesticida = false;
+    private int pesticidasActuales = 0; // <--- CAMBIO A INT
     private bool tieneEscarabajo = false;
     #endregion
 
@@ -107,9 +127,24 @@ public class GameManager : MonoBehaviour
             case GameState.Playing:
                 if (imagenFondo != null) imagenFondo.gameObject.SetActive(true);
                 if (imagenMaceta != null) imagenMaceta.gameObject.SetActive(true);
-                if (imagenPlanta != null) imagenPlanta.gameObject.SetActive(true);
+                
+                // Activamos solo la planta correcta de la flor correcta
+                switch (currentPlantStage)
+                {
+                    case PlantStage.Retono:
+                        if (currentFlowerData.plantaRetono != null) currentFlowerData.plantaRetono.SetActive(true);
+                        break;
+                    case PlantStage.Crecida:
+                        if (currentFlowerData.plantaCrecida != null) currentFlowerData.plantaCrecida.SetActive(true);
+                        break;
+                    case PlantStage.Finalizado:
+                        if (currentFlowerData.plantaFinalizado != null) currentFlowerData.plantaFinalizado.SetActive(true);
+                        break;
+                }
+
                 panelContenedorJuego.SetActive(true);
-                // Nos aseguramos de apagar los botones y pantallas de fin de juego
+                if (barraAgua != null) barraAgua.gameObject.SetActive(true);
+                if (barraPesticida != null) barraPesticida.gameObject.SetActive(true);
                 if (botonVolverMenu_Win != null) botonVolverMenu_Win.SetActive(false);
                 if (botonVolverMenu_Lose != null) botonVolverMenu_Lose.SetActive(false);
                 if (botonDescarga != null) botonDescarga.SetActive(false);
@@ -119,13 +154,11 @@ public class GameManager : MonoBehaviour
             case GameState.Paused:
                 if (panelContenedorSetup != null) panelContenedorSetup.SetActive(false);
                 if (panelContenedorJuego != null) panelContenedorJuego.SetActive(false);
-                // Apagamos también los botones y pantallas de fin de juego
                 if (botonVolverMenu_Win != null) botonVolverMenu_Win.SetActive(false);
                 if (botonVolverMenu_Lose != null) botonVolverMenu_Lose.SetActive(false);
                 if (botonDescarga != null) botonDescarga.SetActive(false);
                 if (imagenVictoria != null) imagenVictoria.SetActive(false);
                 if (imagenDerrota != null) imagenDerrota.SetActive(false);
-
                 panelSonido.SetActive(false);
                 panelPausa.SetActive(true);
                 break;
@@ -137,7 +170,6 @@ public class GameManager : MonoBehaviour
 
     void ActivarPanelesSegunEstado(GameState estado)
     {
-        // ... (sin cambios)
         panelMenu.SetActive(estado == GameState.MainMenu);
         panelCreditos.SetActive(estado == GameState.Credits);
         panelSelectorDeFlores.SetActive(estado == GameState.FlowerSelection);
@@ -149,8 +181,10 @@ public class GameManager : MonoBehaviour
             if (imagenFondo != null) imagenFondo.gameObject.SetActive(true);
             panelContenedorTutorial.SetActive(true);
             if (imagenNpc != null) imagenNpc.gameObject.SetActive(true);
-            foreach (var panel in panelesDialogo) { if (panel != null) panel.SetActive(false); }
-            if (panelesDialogo.Length > 0) panelesDialogo[dialogoActual].SetActive(true);
+            // Apagamos todos los diálogos de la flor actual
+            foreach (var panel in currentFlowerData.panelesDialogo) { if (panel != null) panel.SetActive(false); }
+            // Encendemos solo el primero
+            if (currentFlowerData.panelesDialogo.Length > 0) currentFlowerData.panelesDialogo[dialogoActual].SetActive(true);
         }
 
         if (estado == GameState.LevelSetup)
@@ -160,7 +194,6 @@ public class GameManager : MonoBehaviour
             panelContenedorSetup.SetActive(true);
         }
     }
-
 
     void ApagarTodo()
     {
@@ -172,18 +205,29 @@ public class GameManager : MonoBehaviour
         panelContenedorTutorial.SetActive(false);
         panelContenedorSetup.SetActive(false);
         panelContenedorJuego.SetActive(false);
-        
+        if (barraAgua != null) barraAgua.gameObject.SetActive(false);
+        if (barraPesticida != null) barraPesticida.gameObject.SetActive(false);
         if (botonVolverMenu_Win != null) botonVolverMenu_Win.SetActive(false);
         if (botonVolverMenu_Lose != null) botonVolverMenu_Lose.SetActive(false);
         if (botonDescarga != null) botonDescarga.SetActive(false);
-        if (imagenVictoria != null) imagenVictoria.SetActive(false); // <--- NUEVA LÍNEA
-        if (imagenDerrota != null) imagenDerrota.SetActive(false);  // <--- NUEVA LÍNEA
-
+        if (imagenVictoria != null) imagenVictoria.SetActive(false);
+        if (imagenDerrota != null) imagenDerrota.SetActive(false);
         if (imagenFondo != null) imagenFondo.gameObject.SetActive(false);
         if (imagenMaceta != null) imagenMaceta.gameObject.SetActive(false);
-        if (imagenPlanta != null) imagenPlanta.gameObject.SetActive(false);
         if (imagenNpc != null) imagenNpc.gameObject.SetActive(false);
         if (imagenEscarabajo != null) imagenEscarabajo.gameObject.SetActive(false);
+
+        // Apagamos TODAS las imágenes de TODAS las flores
+        if (todasLasFlores != null)
+        {
+            foreach (FlowerData flower in todasLasFlores)
+            {
+                if (flower.plantaRetono != null) flower.plantaRetono.SetActive(false);
+                if (flower.plantaCrecida != null) flower.plantaCrecida.SetActive(false);
+                if (flower.plantaFinalizado != null) flower.plantaFinalizado.SetActive(false);
+                if (flower.plantaMarchita != null) flower.plantaMarchita.SetActive(false);
+            }
+        }
     }
     
     #endregion
@@ -195,27 +239,39 @@ public class GameManager : MonoBehaviour
     public void BotonSalir() => Application.Quit();
     public void BotonVolverAlMenu() => CambiarEstado(GameState.MainMenu);
 
-    // ... (IniciarNivelGeranio, AvanzarDialogo, CiclarFondo, CiclarMaceta, EmpezarJuego, Pausa, etc. no cambian) ...
-    public void IniciarNivelGeranio()
+    // --- ¡NUEVO! ---
+    // Esta función será llamada por los 4 botones de flores
+    // Geranio: 0, Rosa: 1, Girasol: 2, Noche Buena: 3
+    public void IniciarNivel(int flowerIndex)
     {
+        if (flowerIndex >= todasLasFlores.Length)
+        {
+            Debug.LogError("Índice de flor inválido: " + flowerIndex);
+            return;
+        }
+
+        // Cargamos los datos de la flor seleccionada
+        currentFlowerData = todasLasFlores[flowerIndex];
+        
         dialogoActual = 0;
         fondoActual = 0;
         macetaActual = 0;
         imagenFondo.sprite = spritesFondo[fondoActual];
         imagenMaceta.sprite = spritesMaceta[macetaActual];
-        imagenPlanta.sprite = spriteRetono;
-        currentPlantStage = PlantStage.Retono;
+        
         tieneEscarabajo = false;
         if (imagenEscarabajo != null) imagenEscarabajo.gameObject.SetActive(false);
+        
         CambiarEstado(GameState.Tutorial);
     }
+
     public void AvanzarDialogo()
     {
-        panelesDialogo[dialogoActual].SetActive(false);
+        currentFlowerData.panelesDialogo[dialogoActual].SetActive(false);
         dialogoActual++;
-        if (dialogoActual < panelesDialogo.Length)
+        if (dialogoActual < currentFlowerData.panelesDialogo.Length)
         {
-            panelesDialogo[dialogoActual].SetActive(true);
+            currentFlowerData.panelesDialogo[dialogoActual].SetActive(true);
         }
         else
         {
@@ -232,12 +288,25 @@ public class GameManager : MonoBehaviour
         macetaActual = (macetaActual + 1) % spritesMaceta.Length;
         imagenMaceta.sprite = spritesMaceta[macetaActual];
     }
+
     public void EmpezarJuego()
     {
         riegosActuales = 0;
-        haPuestoPesticida = false;
+        pesticidasActuales = 0;
+        currentPlantStage = PlantStage.Retono;
+        
+        // --- CONFIGURAR BARRAS CON REGLAS DE ETAPA 1 ---
+        riegosRequeridos = currentFlowerData.riegosEtapa1;
+        pesticidasRequeridos = currentFlowerData.pesticidasEtapa1;
+        
+        barraAgua.maxValue = riegosRequeridos;
+        barraAgua.value = 0;
+        barraPesticida.maxValue = pesticidasRequeridos;
+        barraPesticida.value = 0;
+        
         CambiarEstado(GameState.Playing);
     }
+
     public void BotonReanudar() => CambiarEstado(previousState);
     public void BotonSonido() => CambiarEstado(GameState.SoundSettings);
     public void BotonVolverAPausa() => CambiarEstado(GameState.Paused);
@@ -247,62 +316,71 @@ public class GameManager : MonoBehaviour
     {
         if (currentState != GameState.Playing) return;
         riegosActuales++;
-        Debug.Log("Planta regada. Total: " + riegosActuales);
+        barraAgua.value = riegosActuales;
     }
+
     public void BotonPesticida()
     {
         if (currentState != GameState.Playing) return;
-        haPuestoPesticida = true;
-        Debug.Log("Pesticida aplicado.");
+        pesticidasActuales++;
+        barraPesticida.value = pesticidasActuales;
     }
+
     public void BotonPasarTiempo()
     {
-        // ... (La lógica de BotonPasarTiempo no cambia en absoluto)
         if (currentState != GameState.Playing) return;
-        if (riegosActuales <= 0 || riegosActuales >= 4)
+
+        // --- 1. VERIFICACIÓN DE MUERTE (PRIORIDAD ALTA) ---
+        // Muerte por riego incorrecto (debe ser EXACTAMENTE lo requerido)
+        if (riegosActuales != riegosRequeridos)
         {
-            Debug.Log("¡GAME OVER! Riego incorrecto (Total: " + riegosActuales + ")");
+            Debug.Log("¡GAME OVER! Riego incorrecto (Total: " + riegosActuales + ", se necesitaban " + riegosRequeridos + ")");
             Morir();
             return;
         }
-        if (tieneEscarabajo && !haPuestoPesticida)
+        // Muerte por escarabajo no tratado
+        if (tieneEscarabajo && pesticidasActuales < pesticidasRequeridos)
         {
             Debug.Log("¡GAME OVER! El escarabajo no fue tratado.");
             Morir();
             return;
         }
-        bool bichoCuradoOPrevenido = false;
-        if (tieneEscarabajo && haPuestoPesticida)
+
+        // --- 2. LÓGICA DE PESTICIDA Y ESCARABAJO ---
+        bool pesticidaSuficiente = (pesticidasActuales >= pesticidasRequeridos);
+        
+        if (tieneEscarabajo && pesticidaSuficiente)
         {
             tieneEscarabajo = false;
             imagenEscarabajo.gameObject.SetActive(false);
-            bichoCuradoOPrevenido = true;
             Debug.Log("Escarabajo eliminado.");
         }
-        else if (!tieneEscarabajo && haPuestoPesticida)
-        {
-            bichoCuradoOPrevenido = true;
-            Debug.Log("Planta protegida, no aparecerá escarabajo.");
-        }
-        else if (!tieneEscarabajo && !haPuestoPesticida)
+        else if (!tieneEscarabajo && !pesticidaSuficiente)
         {
             tieneEscarabajo = true;
             imagenEscarabajo.gameObject.SetActive(true);
-            bichoCuradoOPrevenido = false;
             Debug.Log("¡Aparece un escarabajo!");
         }
+
+        // --- 3. LÓGICA DE CRECIMIENTO ---
         switch (currentPlantStage)
         {
             case PlantStage.Retono:
                 Debug.Log("La planta crece a 'Crecida'.");
-                imagenPlanta.sprite = spriteCrecida;
+                currentFlowerData.plantaRetono.SetActive(false);
+                currentFlowerData.plantaCrecida.SetActive(true);
                 currentPlantStage = PlantStage.Crecida;
+                
+                // Actualizamos las reglas para la ETAPA 2
+                riegosRequeridos = currentFlowerData.riegosEtapa2;
+                pesticidasRequeridos = currentFlowerData.pesticidasEtapa2;
                 break;
             case PlantStage.Crecida:
-                if (bichoCuradoOPrevenido)
+                if (pesticidaSuficiente)
                 {
                     Debug.Log("La planta crece a 'Finalizado'.");
-                    imagenPlanta.sprite = spriteFinalizado;
+                    currentFlowerData.plantaCrecida.SetActive(false);
+                    currentFlowerData.plantaFinalizado.SetActive(true);
                     currentPlantStage = PlantStage.Finalizado;
                     GanarNivel();
                 }
@@ -315,42 +393,48 @@ public class GameManager : MonoBehaviour
                 Debug.Log("La planta ya está en su etapa final.");
                 break;
         }
+        
+        // --- RESETEAR BARRAS Y CONTADORES ---
         riegosActuales = 0;
-        haPuestoPesticida = false;
+        pesticidasActuales = 0;
+        barraAgua.maxValue = riegosRequeridos; // Actualiza el máximo
+        barraPesticida.maxValue = pesticidasRequeridos; // Actualiza el máximo
+        barraAgua.value = 0;
+        barraPesticida.value = 0;
     }
 
-    // --- FUNCIONES 'MORIR' Y 'GANAR' MODIFICADAS ---
+    private void ApagarPlantasActivas()
+    {
+        if (currentFlowerData == null) return;
+        if (currentFlowerData.plantaRetono != null) currentFlowerData.plantaRetono.SetActive(false);
+        if (currentFlowerData.plantaCrecida != null) currentFlowerData.plantaCrecida.SetActive(false);
+        if (currentFlowerData.plantaFinalizado != null) currentFlowerData.plantaFinalizado.SetActive(false);
+        if (currentFlowerData.plantaMarchita != null) currentFlowerData.plantaMarchita.SetActive(false);
+    }
+    
     private void Morir()
     {
-        imagenPlanta.sprite = spriteMarchita;
-        panelContenedorJuego.SetActive(false);
+        ApagarPlantasActivas(); // Apagamos la planta activa
+        currentFlowerData.plantaMarchita.SetActive(true); // Encendemos la marchita
         
-        // Mostramos SOLO los elementos de Game Over
-        if (imagenDerrota != null) imagenDerrota.SetActive(true); // <--- NUEVA LÍNEA
+        panelContenedorJuego.SetActive(false);
+        if (imagenDerrota != null) imagenDerrota.SetActive(true);
         botonVolverMenu_Lose.SetActive(true);
-
-        // Ocultamos los de victoria
         if (imagenVictoria != null) imagenVictoria.SetActive(false);
         botonVolverMenu_Win.SetActive(false);
         botonDescarga.SetActive(false); 
-        
         if (imagenEscarabajo != null) imagenEscarabajo.gameObject.SetActive(false);
     }
 
     private void GanarNivel()
     {
-        Debug.Log("¡Nivel Ganado! Mostrando botones.");
+        // La planta finalizada ya se activó en BotonPasarTiempo()
         panelContenedorJuego.SetActive(false);
-        
-        // Mostramos los elementos de victoria
-        if (imagenVictoria != null) imagenVictoria.SetActive(true); // <--- NUEVA LÍNEA
+        if (imagenVictoria != null) imagenVictoria.SetActive(true);
         botonVolverMenu_Win.SetActive(true);
         botonDescarga.SetActive(true);
-
-        // Ocultamos los de derrota
         if (imagenDerrota != null) imagenDerrota.SetActive(false);
         botonVolverMenu_Lose.SetActive(false);
-        
         if (imagenEscarabajo != null) imagenEscarabajo.gameObject.SetActive(false);
     }
 
