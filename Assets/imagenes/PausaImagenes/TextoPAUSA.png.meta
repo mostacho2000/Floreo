@@ -1,0 +1,767 @@
+fileFormatVersion: 2
+guid: 7f7bf6969e66d6d498d2a7c29427d8a1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8368489931853707106
+    second: TextoPAUSA_0
+  - first:
+      213: -747315587210520059
+    second: TextoPAUSA_1
+  - first:
+      213: -7394261599758362810
+    second: TextoPAUSA_2
+  - first:
+      213: -8628926180464600241
+    second: TextoPAUSA_3
+  - first:
+      213: -7807035219064027583
+    second: TextoPAUSA_4
+  - first:
+      213: -417913922643716592
+    second: TextoPAUSA_5
+  - first:
+      213: -8298752634191285167
+    second: TextoPAUSA_6
+  - first:
+      213: -3479366899316877374
+    second: TextoPAUSA_7
+  - first:
+      213: -8889541664458074130
+    second: TextoPAUSA_8
+  - first:
+      213: -8093693168083995813
+    second: TextoPAUSA_9
+  - first:
+      213: -2678520297092426794
+    second: TextoPAUSA_10
+  - first:
+      213: -8943927038714965247
+    second: TextoPAUSA_11
+  - first:
+      213: 7255815266140854538
+    second: TextoPAUSA_12
+  - first:
+      213: 8661860181010210901
+    second: TextoPAUSA_13
+  - first:
+      213: 5808865958223662478
+    second: TextoPAUSA_14
+  - first:
+      213: -8321167220526168352
+    second: TextoPAUSA_15
+  - first:
+      213: -2246373930887410894
+    second: TextoPAUSA_16
+  - first:
+      213: 342042146611969604
+    second: TextoPAUSA_17
+  - first:
+      213: -6968085258705152630
+    second: TextoPAUSA_18
+  - first:
+      213: 8853744829378298243
+    second: TextoPAUSA_19
+  - first:
+      213: 1257715807055882940
+    second: TextoPAUSA_20
+  - first:
+      213: -8846773383210202400
+    second: TextoPAUSA_21
+  - first:
+      213: 5144498787375136464
+    second: TextoPAUSA_22
+  - first:
+      213: 9089299274534894376
+    second: TextoPAUSA_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TextoPAUSA_0
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 744
+        width: 646
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e984d61ceb62ddb80800000000000000
+      internalID: -8368489931853707106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextoPAUSA_1
+      rect:
+        serializedVersion: 2
+        x: 1245
+        y: 1035
+        width: 12
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50a5431de6001a5f0800000000000000
+      internalID: -747315587210520059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextoPAUSA_2
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 952
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6475712604e426990800000000000000
+      internalID: -7394261599758362810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextoPAUSA_3
+      rect:
+        serializedVersion: 2
+        x: 1309
+        y: 955
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4bd65c5b55ef3880800000000000000
+      internalID: -8628926180464600241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextoPAUSA_4
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 824
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14689bae4d6d7a390800000000000000
+      internalID: -7807035219064027583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextoPAUSA_5
+      rect:
+        serializedVersion: 2
+        x: 1305
+        y: 824
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01691266085433af0800000000000000
+      internalID: -417913922643716592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextoPAUSA_6
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 737
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 154f038a278e4dc80800000000000000
+      internalID: -8298752634191285167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextoPAUSA_7
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 744
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c717f25d3ec6bfc0800000000000000
+      internalID: -3479366899316877374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextoPAUSA_8
+      rect:
+        serializedVersion: 2
+        x: 753
+        y: 723
+        width: 9
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee711f974f002a480800000000000000
+      internalID: -8889541664458074130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextoPAUSA_9
+      rect:
+        serializedVersion: 2
+        x: 794
+        y: 743
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b53f85322fc6daf80800000000000000
+      internalID: -8093693168083995813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextoPAUSA_10
+      rect:
+        serializedVersion: 2
+        x: 797
+        y: 736
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d3d1203bfbf3dad0800000000000000
+      internalID: -2678520297092426794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextoPAUSA_11
+      rect:
+        serializedVersion: 2
+        x: 1176
+        y: 736
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1031268ceb9c0e380800000000000000
+      internalID: -8943927038714965247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextoPAUSA_12
+      rect:
+        serializedVersion: 2
+        x: 1183
+        y: 743
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a099e26aa85d1b460800000000000000
+      internalID: 7255815266140854538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextoPAUSA_13
+      rect:
+        serializedVersion: 2
+        x: 1221
+        y: 723
+        width: 8
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 550e63f21fb153870800000000000000
+      internalID: 8661860181010210901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextoPAUSA_14
+      rect:
+        serializedVersion: 2
+        x: 1258
+        y: 743
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8dc7c3ffcc3d9050800000000000000
+      internalID: 5808865958223662478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextoPAUSA_15
+      rect:
+        serializedVersion: 2
+        x: 1261
+        y: 738
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e6c9e71086458c80800000000000000
+      internalID: -8321167220526168352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextoPAUSA_16
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 729
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23b02c8cfc643d0e0800000000000000
+      internalID: -2246373930887410894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextoPAUSA_17
+      rect:
+        serializedVersion: 2
+        x: 1176
+        y: 729
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44eb407258d2fb400800000000000000
+      internalID: 342042146611969604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextoPAUSA_18
+      rect:
+        serializedVersion: 2
+        x: 1258
+        y: 730
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a855e3e20636c4f90800000000000000
+      internalID: -6968085258705152630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextoPAUSA_19
+      rect:
+        serializedVersion: 2
+        x: 1266
+        y: 737
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3818b0f5302deda70800000000000000
+      internalID: 8853744829378298243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextoPAUSA_20
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 706
+        width: 10
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbaa5f3ecdd447110800000000000000
+      internalID: 1257715807055882940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextoPAUSA_21
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 707
+        width: 12
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ea006dea72f93580800000000000000
+      internalID: -8846773383210202400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextoPAUSA_22
+      rect:
+        serializedVersion: 2
+        x: 1177
+        y: 706
+        width: 10
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0de3ce0f36ee46740800000000000000
+      internalID: 5144498787375136464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextoPAUSA_23
+      rect:
+        serializedVersion: 2
+        x: 1259
+        y: 706
+        width: 11
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82b3ed3788da32e70800000000000000
+      internalID: 9089299274534894376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      TextoPAUSA_0: -8368489931853707106
+      TextoPAUSA_1: -747315587210520059
+      TextoPAUSA_10: -2678520297092426794
+      TextoPAUSA_11: -8943927038714965247
+      TextoPAUSA_12: 7255815266140854538
+      TextoPAUSA_13: 8661860181010210901
+      TextoPAUSA_14: 5808865958223662478
+      TextoPAUSA_15: -8321167220526168352
+      TextoPAUSA_16: -2246373930887410894
+      TextoPAUSA_17: 342042146611969604
+      TextoPAUSA_18: -6968085258705152630
+      TextoPAUSA_19: 8853744829378298243
+      TextoPAUSA_2: -7394261599758362810
+      TextoPAUSA_20: 1257715807055882940
+      TextoPAUSA_21: -8846773383210202400
+      TextoPAUSA_22: 5144498787375136464
+      TextoPAUSA_23: 9089299274534894376
+      TextoPAUSA_3: -8628926180464600241
+      TextoPAUSA_4: -7807035219064027583
+      TextoPAUSA_5: -417913922643716592
+      TextoPAUSA_6: -8298752634191285167
+      TextoPAUSA_7: -3479366899316877374
+      TextoPAUSA_8: -8889541664458074130
+      TextoPAUSA_9: -8093693168083995813
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
