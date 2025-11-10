@@ -670,8 +670,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: es una planta que necesita agua pero no tanta, ademas al ser flor no necesita
-    mucho pesticida
+  m_text: Es una planta que necesita agua al principio luego ya no tanta, ademas
+    al ser flor no necesita mucho pesticida
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5527,8 +5527,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: El rosal es una planta que necesita mucha agua, se igual manera als er
-    un arbusto tiene bastanates insectos, ten cuidado y estate al pendiente
+  m_text: El rosal es una planta que necesita mucha agua, de igual manera al ser
+    un arbusto tiene bastantes insectos, ten cuidado y estate al pendiente
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6230,8 +6230,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 3496090447762959022, guid: db8ca425e0af98348a02e37f3f991718, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -9027,7 +9027,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Un dato curioso de los Girasoles, los girasoles j\xF3venes siguen el sol
+  m_text: "Un dato curioso de los Girasoles, los Girasoles j\xF3venes siguen el sol
     a lo largo del d\xEDa (heliotropismo), pero al madurar dejan de moverse y se
     quedan mirando hacia el este"
   m_isRightToLeft: 0
@@ -9241,7 +9241,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Ya veo que sigues por aqui, y ahora esoges una flor especial como el dia,
+  m_text: Ya veo que sigues por aqui, y ahora escoges una flor especial como el dia,
     el Girasol
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -11723,7 +11723,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1868744086
 RectTransform:
   m_ObjectHideFlags: 0
